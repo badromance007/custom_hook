@@ -1,6 +1,8 @@
 import './App.css';
 import useAntiCounter from './custom_hooks/useAntiCounter';
 import useCounter from './custom_hooks/useCounter';
+import Menu from './components/Menu';
+import Favorite from './components/Favorite';
 
 function App() {
 
@@ -14,6 +16,16 @@ function App() {
       <br />
       <h1>The minus count is {count}</h1>
       <button onClick={decrement}>Minus 1</button>
+
+      <br />
+      <br />
+      <br />
+
+      <div>
+        <Menu />
+        <hr />
+        <Favorite />
+      </div>
     </div>
   );
 }

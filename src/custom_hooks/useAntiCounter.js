@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function useAntiCounter(initValue) {
+export default function useAntiCounter(initValue = 5) {
     const [count, setCount] = useState(initValue)
 
     function decrement() {
