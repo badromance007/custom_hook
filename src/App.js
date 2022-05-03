@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import useAntiCounter from './custom_hooks/useAntiCounter';
+import useCounter from './custom_hooks/useCounter';
 
 function App() {
+
+  const [number, add] = useCounter()
+  const {count, decrement} = useAntiCounter(10)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>The count is {number}</h1>
+      <button onClick={add}>Add 1</button>
+      <br />
+      <h1>The minus count is {count}</h1>
+      <button onClick={decrement}>Minus 1</button>
     </div>
   );
 }
